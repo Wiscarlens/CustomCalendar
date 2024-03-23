@@ -27,4 +27,35 @@
         app:layout_constraintRight_toRightOf="@+id/backgroundCircle"
         app:layout_constraintLeft_toLeftOf="@+id/backgroundCircle"/>
 
+    <View
+        android:id="@+id/greenDot"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:background="@drawable/green_dot"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/cellDayText"
+        app:layout_constraintStart_toStartOf="@+id/cellDayText"
+        app:layout_constraintEnd_toEndOf="@+id/cellDayText"/>
+
+    <View
+        android:id="@+id/blueDot"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:background="@drawable/blue_dot"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/cellDayText"
+        app:layout_constraintStart_toStartOf="@+id/cellDayText"
+        app:layout_constraintEnd_toStartOf="@+id/yellowDot"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <View
+        android:id="@+id/yellowDot"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:background="@drawable/yellow_dot"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/cellDayText"
+        app:layout_constraintStart_toEndOf="@+id/blueDot"
+        app:layout_constraintEnd_toEndOf="@+id/cellDayText"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
