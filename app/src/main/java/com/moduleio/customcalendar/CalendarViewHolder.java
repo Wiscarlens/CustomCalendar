@@ -29,15 +29,25 @@ public class CalendarViewHolder extends RecyclerView.ViewHolder implements View.
         itemView.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View view)
-    {
+    public void selectDay() {
         if(previousView != null){
             previousView.findViewById(R.id.backgroundCircle).setVisibility(View.INVISIBLE);
             ((TextView) previousView.findViewById(R.id.cellDayText)).setTextColor(Color.BLACK);
         }
         backgroundCircle.setVisibility(View.VISIBLE);
-        dayOfMonth.setTextColor(Color.WHITE);
+        dayOfMonth.setTextColor(Color.BLACK);
+    }
+
+    public void currentDay() {
+        backgroundCircle.setVisibility(View.VISIBLE);
+        backgroundCircle.setBackgroundResource(R.drawable.current_day_circle);
+        dayOfMonth.setTextColor(Color.BLACK);
+    }
+
+    @Override
+    public void onClick(View view)
+    {
+        selectDay();
         onItemListener.onItemClick(getAdapterPosition(), (String) dayOfMonth.getText());
         previousView = view;
     }

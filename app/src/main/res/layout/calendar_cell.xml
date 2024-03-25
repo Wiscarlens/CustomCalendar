@@ -8,7 +8,7 @@
         android:id="@+id/backgroundCircle"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:background="@drawable/circle_background"
+        android:background="@drawable/current_day_circle"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
